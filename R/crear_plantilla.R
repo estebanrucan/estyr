@@ -21,6 +21,8 @@
 #'
 #' @examples \dontrun{crear_plantilla("Analsis Exploratorio")}
 #'
+#' @export
+#'
 crear_plantilla <- function(titulo,
                             color_fondo        = '#202123',
                             color_fuente       = '#B8BCC2',
