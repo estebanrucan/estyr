@@ -15,7 +15,7 @@
 #'
 #' @return Plantilla de R Markdown.
 #'
-#' @importFrom utils file.edit
+#' @importFrom rstudioapi navigateToFile
 #'
 #' @encoding UTF-8
 #'
@@ -129,7 +129,7 @@ crear_plantilla <- function(titulo,
 
     writeLines(contenido_archivo, archivo)
 
-    file.edit(nombre_archivo)
+    navigateToFile(nombre_archivo)
 
     close(archivo)
 
