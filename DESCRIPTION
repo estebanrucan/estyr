@@ -7,7 +7,7 @@ Maintainer: Esteban Rucán <errucan@gmail.com>
 Description: Un package que es bastante util, con cosas que hacen mejorar la eficiencia del trabajo
 Encoding: UTF-8
 License: GPL-3 + file LICENSE
-LazyData: false
+LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
     remotes,
