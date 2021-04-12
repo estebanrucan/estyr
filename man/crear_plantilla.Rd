@@ -3,47 +3,43 @@
 \encoding{UTF-8}
 \name{crear_plantilla}
 \alias{crear_plantilla}
-\title{Power Mean}
+\title{Crear Plantilla de R Markdown.}
 \usage{
 crear_plantilla(
-  bg = "#202123",
-  fg = "#B8BCC2",
-  primary = "#EA80FC",
-  base_font = "Patrick Hand",
-  code_font = "Fira Code",
-  crear_proyecto = FALSE,
-  ...
+  titulo,
+  color_fondo = "#202123",
+  color_fuente = "#B8BCC2",
+  resaltado = "#EA80FC",
+  tipo_fuente = "Patrick Hand",
+  tipo_fuente_codigo = "Fira Code"
 )
 }
 \arguments{
-\item{bg}{Character. Color de fondo de la plantilla}
+\item{titulo}{Character. Título de la plantilla.}
 
-\item{fg}{Character. Color de fuente y lineas de la plantilla}
+\item{color_fondo}{Character. Color de fondo de la plantilla}
 
-\item{primary}{Character. color de resaltado de la plantilla}
+\item{color_fuente}{Character. Color de fuente y lineas de la plantilla}
 
-\item{base_font}{Character. Tipo de fuente (En Google Fonts) de la plantilla.}
+\item{resaltado}{Character. color de resaltado de la plantilla}
 
-\item{code_font}{Character. Tipo de fuente (En Google Fonts)  del código de la plantilla.}
+\item{tipo_fuente}{Character. Tipo de fuente (En Google Fonts) de la plantilla.}
 
-\item{crear_proyecto}{Valor lógico. Si es \code{TRUE}, crea un proyecto en el directorio}
-
-\item{...}{Parámetros adicionales para la función \code{crear_proyecto}}
+\item{tipo_fuente_codigo}{Character. Tipo de fuente (En Google Fonts) del código de la plantilla.}
 }
 \value{
-Media generalizada según la potencia \code{m}.
+Plantilla de R Markdown.
 }
 \description{
-Calcular la Media Generalizada de un vector y potencia \code{m}.
+Crear una plantilla de R Markdown en el directorio seleccionado.
 }
 \details{
-Las medias generalizadas, también conocidas como medias de Hölder, son una abstracción de las medias cuadráticas, aritméticas, geométricas y armónicas. Se definen y agrupan a través de la siguiente expresión:
-(1 / n * sum(x ^ m)) ^ (1 / m).
+Esta función proporciona una forma rápida de crear una plantilla de R Markdown.
 }
 \examples{
-\dontrun{crear_plantilla()}
+\dontrun{crear_plantilla("Analsis Exploratorio")}
 
 }
 \author{
-Esteban Rucán.
+Esteban Rucám.
 }

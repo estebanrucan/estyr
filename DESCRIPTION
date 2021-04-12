@@ -15,7 +15,9 @@ Imports:
     bslib,
     usethis,
     thematic,
-    rstudioapi
+    rstudioapi,
+    pacman,
+    utils
 Depends: 
     R (>= 3.5.0)
 Language: es
