@@ -31,7 +31,7 @@ actualizar_package <- function() {
     utils::remove.packages(pkgs = 'estyr',
                            lib  = .libPaths()[1])
 
-    remotes::install_github(repo  = 'estyr',
+    remotes::install_github(repo  = 'estebanrucan/estyr',
                             lib   = .libPaths()[1],
                             force = TRUE)
 
