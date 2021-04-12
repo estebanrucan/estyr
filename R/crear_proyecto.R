@@ -29,7 +29,7 @@ crear_proyecto <- function(estructura = TRUE) {
 
     is_a_project <- length(grep("\\.Rproj$", list.files(dir))) > 0
 
-    stopifnot(!is_a_project)
+    stopifnot(is_a_project)
 
     setwd(dir)
 
