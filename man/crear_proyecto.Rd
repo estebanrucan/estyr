@@ -11,7 +11,7 @@ crear_proyecto(estructura = TRUE)
 \item{estructura}{Valor lógico. Si es \code{TRUE}, indica que desea crear carpetas para estructurar el proyecto}
 }
 \value{
-Proyecto
+Proyecto de RStudio
 }
 \description{
 Función que crea un proyecto en el directorio indicdo
@@ -20,7 +20,7 @@ Función que crea un proyecto en el directorio indicdo
 Función que facilita la creación de un proyecto en RStudio
 }
 \examples{
-dontrun{crear_proyecto()}
+\dontrun{crear_proyecto()}
 
 }
 \author{

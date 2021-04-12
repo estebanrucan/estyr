@@ -7,23 +7,28 @@
 #'
 #' @author Esteban Rucán.
 #'
-#' @param dir Un vector con valores numéricos.
-#' @param crear_proyecto Potencia de la media generalizada. Si es 0, hace referencia a la media geométrica.
-#' @param na.rm Valor Lógico, si es \code{TRUE}, excluye \code{NA} de los cálulos.
+#'
+#' @param bg Character. Color de fondo de la plantilla
+#' @param fg Character. Color de fuente y lineas de la plantilla
+#' @param primary Character. color de resaltado de la plantilla
+#' @param base_font Character. Tipo de fuente (En Google Fonts) de la plantilla.
+#' @param code_font Character. Tipo de fuente (En Google Fonts)  del código de la plantilla.
+#' @param crear_proyecto Valor lógico. Si es \code{TRUE}, crea un proyecto en el directorio
+#' @param ... Parámetros adicionales para la función \code{crear_proyecto}
 #'
 #' @return Media generalizada según la potencia \code{m}.
 #' @encoding UTF-8
 #'
-#' @examples power_mean(x = c(1:100, NA), m = 2, na.rm = TRUE)
-#' power_mean(3:10, 2, FALSE)
-#' power_mean(50:60, 0, FALSE)
+#' @examples \dontrun{crear_plantilla()}
 #'
 crear_plantilla <- function(bg = '#202123',
                             fg = '#B8BCC2',
                             primary = '#EA80FC',
                             base_font = 'Patrick Hand',
                             code_font = 'Fira Code',
-                            dir = getwd(),
-                            crear_proyecto = FALSE) {
+                            crear_proyecto = FALSE,
+                            ...) {
+
+    bg;fg;primary;base_font;code_font;crear_proyecto
 
 }

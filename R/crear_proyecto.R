@@ -6,7 +6,7 @@
 #'
 #' @author Esteban Rucán.
 #'
-#' @return Proyecto
+#' @return Proyecto de RStudio
 #'
 #' @param estructura Valor lógico. Si es \code{TRUE}, indica que desea crear carpetas para estructurar el proyecto
 #'
@@ -18,7 +18,7 @@
 #' @importFrom rstudioapi selectDirectory
 #' @importFrom usethis create_project
 #'
-#' @examples dontrun{crear_proyecto()}
+#' @examples \dontrun{crear_proyecto()}
 #'
 #' @export
 
@@ -26,10 +26,6 @@ crear_proyecto <- function(estructura = TRUE) {
     dir <- selectDirectory(caption = "Seleciona Carpeta para crear Proyecto",
                     label = "Seleccionar Carpeta",
                     path = getwd())
-
-    is_a_project <- length(grep("\\.Rproj$", list.files(dir))) > 0
-
-    if (is_a_project) stop('Already a project')
 
     setwd(dir)
 
@@ -45,6 +41,10 @@ crear_proyecto <- function(estructura = TRUE) {
         dir.create('resultados')
 
     }
+
+    is_a_project <- length(grep("\\.Rproj$", list.files(dir))) > 0
+
+    if (is_a_project) stop('Already a project')
 
     create_project('./', open = TRUE)
 

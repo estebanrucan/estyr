@@ -4,7 +4,8 @@ Title: Package con funciones que facilitan mi workflow
 Version: 0.1.0
 Author: Esteban Rucán
 Maintainer: Esteban Rucán <errucan@gmail.com>
-Description: Un package que es bastante util, con cosas que hacen mejorar la eficiencia del trabajo
+Description: Un package que es bastante util, 
+    con cosas que hacen mejorar la eficiencia del trabajo.
 Encoding: UTF-8
 License: GPL-3 + file LICENSE
 LazyData: true
