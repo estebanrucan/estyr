@@ -62,6 +62,8 @@ crear_plantilla <- function(titulo,
                  "",
                  "# Tema de los gr\u00E1fico est\u00E1ticos",
                  "",
+                 "ggplot2::theme_set(ggplot2::theme_dark())",
+                 "",
                  "thematic::thematic_on(bg     = 'auto',",
                  "                      fg     = 'auto',",
                  "                      accent = 'auto')",
@@ -87,6 +89,11 @@ crear_plantilla <- function(titulo,
                  "#require(broom)",
                  "#require(igraph)",
                  "#require(ggraph)",
+                 "#require(datapasta)",
+                 "require(ggExtra)",
+                 "require(highcharter)",
+                 "require(sqldf)",
+                 "require(DT)",
                  "```",
                  "",
                  "## Pregunta 1",
@@ -129,8 +136,10 @@ crear_plantilla <- function(titulo,
 
     writeLines(contenido_archivo, archivo)
 
-    navigateToFile(nombre_archivo)
-
     close(archivo)
+
+    options("yaml.eval.expr" = TRUE)
+
+    navigateToFile(nombre_archivo)
 
 }
