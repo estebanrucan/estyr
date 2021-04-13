@@ -5,7 +5,7 @@
 \alias{crear_proyecto}
 \title{Crear Proyecto de RStudio}
 \usage{
-crear_proyecto(estructura = TRUE)
+crear_proyecto(estructura = FALSE)
 }
 \arguments{
 \item{estructura}{Valor lógico. Si es \code{TRUE}, indica que desea crear carpetas para estructurar el proyecto}
