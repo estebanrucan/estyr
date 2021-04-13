@@ -22,7 +22,7 @@
 #'
 #' @export
 
-crear_proyecto <- function(estructura = TRUE) {
+crear_proyecto <- function(estructura = FALSE) {
     dir <- selectDirectory(caption = "Seleciona Carpeta para crear Proyecto",
                     label = "Seleccionar Carpeta",
                     path = getwd())
