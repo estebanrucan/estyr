@@ -27,6 +27,8 @@ crear_proyecto <- function(estructura = FALSE) {
                     label = "Seleccionar Carpeta",
                     path = getwd())
 
+    stopifnot(length(dir) > 0)
+
     setwd(dir)
 
     if (estructura) {

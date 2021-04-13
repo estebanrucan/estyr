@@ -34,6 +34,8 @@ crear_plantilla <- function(titulo,
                            label = "Seleccionar Carpeta",
                            path = getwd())
 
+    stopifnot(length(dir) > 0 & titulo != '' & length(titulo) > 0)
+
     contenido_archivo <- c("---",
                  paste0("title: \"<center>", titulo, "</center>\""),
                  "subtitle: \"<center>Subt\u00EDtulo</center>\"",
