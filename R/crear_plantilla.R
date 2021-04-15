@@ -23,18 +23,18 @@
 #'
 #' @export
 #'
-crear_plantilla <- function(titulo,
+crear_plantilla <- function(titulo = 'Sin t\u00EDtulo',
                             color_fondo        = '#202123',
                             color_fuente       = '#B8BCC2',
-                            resaltado          = '#EA80FC',
+                            resaltado          = '#FF8383',
                             tipo_fuente        = 'Patrick Hand',
                             tipo_fuente_codigo = 'Fira Code') {
 
-    dir <- selectDirectory(caption = "Seleciona lugar para crear plantilla",
+    dir <- selectDirectory(caption = "Selecciona lugar para crear plantilla",
                            label = "Seleccionar Carpeta",
                            path = getwd())
 
-    stopifnot(length(dir) > 0 & titulo != '' & length(titulo) > 0)
+    stopifnot(length(dir) > 0 & titulo != '')
 
     contenido_archivo <- c("---",
                  paste0("title: \"<center>", titulo, "</center>\""),
@@ -63,13 +63,13 @@ crear_plantilla <- function(titulo,
                  "                      comment   = NA,",
                  "                      fig.align = 'center')",
                  "",
-                 "# Tema de los gr\u00E1fico est\u00E1ticos",
+                 "# Tema de los gr\u00E1ficos",
                  "",
-                 "ggplot2::theme_set(ggplot2::theme_dark())",
                  "",
                  "thematic::thematic_on(bg     = 'auto',",
                  "                      fg     = 'auto',",
                  "                      accent = 'auto')",
+                 "ggplot2::theme_set(ggplot2::theme_dark())",
                  "",
                  "# Escribe los packages que usar\u00E1s aqu\u00ED:",
                  "",
@@ -77,26 +77,24 @@ crear_plantilla <- function(titulo,
                  "               magrittr,",
                  "               echarts4r,",
                  "               estyr)",
+                 "               flextable)",
                  "",
-                 "#require(tidymodels)",
-                 "#require(naniar)",
-                 "#require(lubridate)",
-                 "#require(reclin)",
-                 "#require(fuzzyjoin)",
-                 "#require(stringdist)",
-                 "#require(plotly)",
-                 "#require(janitor)",
-                 "#require(readxl)",
-                 "#require(skimr)",
-                 "#require(ranger)",
-                 "#require(broom)",
-                 "#require(igraph)",
-                 "#require(ggraph)",
-                 "#require(datapasta)",
-                 "require(ggExtra)",
-                 "require(highcharter)",
-                 "require(sqldf)",
-                 "require(DT)",
+                 "# suppressPackageStartupMessages(require(broom))",
+                 "# suppressPackageStartupMessages(require(dlookr))",
+                 "# suppressPackageStartupMessages(require(DT))",
+                 "# suppressPackageStartupMessages(require(GGally))",
+                 "# suppressPackageStartupMessages(require(ggExtra))",
+                 "# suppressPackageStartupMessages(require(ggpubr))",
+                 "# suppressPackageStartupMessages(require(ggraph))",
+                 "# suppressPackageStartupMessages(require(highcharter))",
+                 "# suppressPackageStartupMessages(require(igraph))",
+                 "# suppressPackageStartupMessages(require(janitor))",
+                 "# suppressPackageStartupMessages(require(lubridate))",
+                 "# suppressPackageStartupMessages(require(naniar))",
+                 "# suppressPackageStartupMessages(require(ranger))",
+                 "# suppressPackageStartupMessages(require(readxl))",
+                 "# suppressPackageStartupMessages(require(skimr))",
+                 "# suppressPackageStartupMessages(require(tidymodels))",
                  "```",
                  "",
                  "## Pregunta 1",
@@ -129,9 +127,9 @@ crear_plantilla <- function(titulo,
                  "",
                  "```")
 
-    titulo_snake_case <- tolower(gsub(" ", "-", titulo))
+    titulo_snake_case <- iconv(tolower(gsub(" ", "-", titulo)), to = 'ASCII//TRANSLIT')
 
-    nombre_archivo <- paste0(dir, '//', format(Sys.Date(), format = "%Y-%m-%d"), '_', titulo_snake_case, '.Rmd')
+    nombre_archivo <- paste0(dir, '//', format(Sys.Date(), format = '%Y-%m-%d'), '_', titulo_snake_case, '.Rmd')
 
     file.create(nombre_archivo)
 

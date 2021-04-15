@@ -1,11 +1,11 @@
 Package: estyr
 Type: Package
-Title: Package con funciones que facilitan mi workflow
-Version: 0.1.0
+Title: Package con funciones y recursos que facilitan el trabajo
+Version: 1.0.0
 Author: Esteban Rucán
 Maintainer: Esteban Rucán <errucan@gmail.com>
 Description: Un package que es bastante util, 
-    con cosas que hacen mejorar la eficiencia del trabajo.
+    con cosas que mejoran la eficiencia del trabajo.
 Encoding: UTF-8
 License: GPL-3 + file LICENSE
 LazyData: true
@@ -17,7 +17,8 @@ Imports:
     thematic,
     rstudioapi,
     pacman,
-    utils
+    utils,
+    tidyverse
 Depends: 
     R (>= 3.5.0)
 Language: es

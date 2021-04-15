@@ -6,10 +6,10 @@
 \title{Crear Plantilla de R Markdown.}
 \usage{
 crear_plantilla(
-  titulo,
+  titulo = "Sin título",
   color_fondo = "#202123",
   color_fuente = "#B8BCC2",
-  resaltado = "#EA80FC",
+  resaltado = "#FF8383",
   tipo_fuente = "Patrick Hand",
   tipo_fuente_codigo = "Fira Code"
 )
