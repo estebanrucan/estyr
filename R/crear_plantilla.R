@@ -144,7 +144,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
 
     archivo <- file(nombre_archivo)
 
-    writeLines(contenido_archivo, archivo)
+    writeLines(contenido_archivo, archivo, useBytes = TRUE)
 
     options('yaml.eval.expr' = TRUE)
 
