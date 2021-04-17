@@ -3,6 +3,8 @@
 export(actualizar_package)
 export(crear_plantilla)
 export(crear_proyecto)
+export(theme_estyr)
+import(ggplot2)
 import(remotes)
 importFrom(rstudioapi,navigateToFile)
 importFrom(rstudioapi,selectDirectory)
