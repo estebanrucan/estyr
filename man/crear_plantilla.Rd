@@ -41,5 +41,5 @@ Esta función proporciona una forma rápida de crear una plantilla de R Markdown
 
 }
 \author{
-Esteban Rucám.
+Esteban Rucán.
 }
