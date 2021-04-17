@@ -32,13 +32,15 @@ theme_estyr(
 
 \item{plot_title_margin}{Valor numérico. Margen del título.}
 
-\item{legend_position}{Character. Posición de la leyenda}
+\item{legend_position}{Character. Posición de la leyenda.}
+
+\item{...}{Argumentos adicionales de \code{theme_minimal}}
 }
 \value{
-Plantilla de R Markdown.
+Gráfico de ggplot2 configurado.
 }
 \description{
-Tema de ggplot con algunas configuraciones habituales
+Tema de ggplot2 con algunas configuraciones habituales
 }
 \details{
 Está función fue desarrollada con el fin de tener gráficos de un solo estilo

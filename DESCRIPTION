@@ -18,6 +18,7 @@ Imports:
     rstudioapi,
     pacman,
     utils,
+    ggplot2,
     tidyverse
 Depends: 
     R (>= 3.5.0)

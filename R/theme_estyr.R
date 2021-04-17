@@ -1,6 +1,6 @@
 #' Tema para ggplot2
 #'
-#' Tema de ggplot con algunas configuraciones habituales
+#' Tema de ggplot2 con algunas configuraciones habituales
 #'
 #' Está función fue desarrollada con el fin de tener gráficos de un solo estilo
 #'
@@ -13,8 +13,10 @@
 #' @param subtitle_margin Valor numérico. Margen del subtítulo.
 #' @param plot_title_size Valor numérico. Tamaño de fuente del título en pts.
 #' @param plot_title_margin Valor numérico. Margen del título.
-#' @param legend_position Character. Posición de la leyenda
-#' @return Plantilla de R Markdown.
+#' @param legend_position Character. Posición de la leyenda.
+#' @param ... Argumentos adicionales de \code{theme_minimal}
+#'
+#' @return Gráfico de ggplot2 configurado.
 #'
 #' @import ggplot2
 #'
