@@ -4,7 +4,7 @@
 #'
 #' Esta función proporciona una forma rápida de crear una plantilla de R Markdown.
 #'
-#' @author Esteban Rucám.
+#' @author Esteban Rucán.
 #'
 #' @param titulo Character. Título de la plantilla.
 #' @param color_fondo Character. Color de fondo de la plantilla
