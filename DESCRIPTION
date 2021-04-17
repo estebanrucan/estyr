@@ -19,7 +19,9 @@ Imports:
     pacman,
     utils,
     ggplot2,
-    tidyverse
+    tidyverse,
+    tibble,
+    rio
 Depends: 
     R (>= 3.5.0)
 Language: es
