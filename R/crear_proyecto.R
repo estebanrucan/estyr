@@ -14,20 +14,21 @@
 #'
 #' @import remotes
 #'
-#' @importFrom usethis use_template
 #' @importFrom rstudioapi selectDirectory
 #' @importFrom usethis create_project
+#' @importFrom utils osVersion
 #'
 #' @examples \dontrun{crear_proyecto()}
 #'
 #' @export
 
 crear_proyecto <- function(estructura = FALSE) {
-    dir <- selectDirectory(caption = "Seleciona Carpeta para crear Proyecto",
+    dir <- rstudioapi::selectDirectory(caption = "Seleciona Carpeta para crear Proyecto",
                     label = "Seleccionar Carpeta",
                     path = getwd())
-
     stopifnot(length(dir) > 0)
+
+    if (length(grep("Windows", osVersion)) > 0) dir <- iconv(dir, "UTF-8")
 
     setwd(dir)
 
@@ -48,7 +49,7 @@ crear_proyecto <- function(estructura = FALSE) {
 
     if (is_a_project) stop('Already a project')
 
-    create_project('./', open = TRUE)
+    usethis::create_project('./', open = TRUE)
 
 }
 
