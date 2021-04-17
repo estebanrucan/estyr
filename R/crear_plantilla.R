@@ -70,7 +70,6 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "                      comment   = NA,",
                  "                      fig.align = 'center')",
                  "",
-                 "options('yaml.eval.expr' = TRUE)",
                  "",
                  "# Tema de los gr\u00E1ficos",
                  "",
@@ -146,6 +145,8 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
     archivo <- file(nombre_archivo)
 
     writeLines(contenido_archivo, archivo)
+
+    options('yaml.eval.expr' = TRUE)
 
     close(archivo)
 
