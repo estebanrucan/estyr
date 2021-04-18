@@ -21,7 +21,8 @@ Imports:
     ggplot2,
     tidyverse,
     tibble,
-    rio
+    rio,
+    echarts4r
 Depends: 
     R (>= 3.5.0)
 Language: es
