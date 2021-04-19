@@ -83,7 +83,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "thematic::thematic_on(bg          = 'auto',",
                  "                      fg          = 'auto',",
                  "                      accent      = 'auto',",
-                 "                      qualitative = c('#6a4c93', '#13b591', '#1982c4', '#990033', '#4b778d')",
+                 "                      qualitative = estyr::paleta_estyr()",
                  "",
                  "ggplot2::theme_set(estyr::theme_estyr())",
                  "",
@@ -162,7 +162,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                archivo,
                useBytes = TRUE)
 
-    options(yaml.eval.expr = TRUE)
+    options('yaml.eval.expr' = TRUE)
 
     close(archivo)
 
