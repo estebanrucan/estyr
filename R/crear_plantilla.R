@@ -24,7 +24,7 @@
 #'
 #' @export
 #'
-crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
+crear_plantilla <- function(titulo             = 'Sin titulo',
                             color_fondo        = '#202123',
                             color_fuente       = '#B8BCC2',
                             resaltado          = '#FF8383',
@@ -80,7 +80,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "thematic::thematic_on(bg          = 'auto',",
                  "                      fg          = 'auto',",
                  "                      accent      = 'auto',",
-                 "                      qualitative = estyr::paleta_estyr()",
+                 "                      qualitative = estyr::paleta_estyr())",
                  "",
                  "ggplot2::theme_set(estyr::theme_estyr())",
                  "",
