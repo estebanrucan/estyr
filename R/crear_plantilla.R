@@ -33,13 +33,10 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
 
     dir <- selectDirectory(caption = "Selecciona lugar para crear plantilla",
                            label = "Seleccionar Carpeta",
-                           path = getwd())
+                           path = iconv(getwd(), "UTF-8"))
 
-    if (length(grep("Windows", osVersion)) > 0) {
-        dir <- iconv(dir, "UTF-8")
-        titulo <- iconv(titulo, "UTF-8")
-    }
-
+    dir    <- iconv(dir, "UTF-8")
+    titulo <- iconv(titulo, "UTF-8")
 
     stopifnot(length(dir) > 0 & titulo != '')
 

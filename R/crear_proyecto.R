@@ -25,10 +25,10 @@
 crear_proyecto <- function(estructura = FALSE) {
     dir <- rstudioapi::selectDirectory(caption = "Seleciona Carpeta para crear Proyecto",
                     label = "Seleccionar Carpeta",
-                    path = getwd())
+                    path = iconv(getwd(), "UTF-8"))
     stopifnot(length(dir) > 0)
 
-    if (length(grep("Windows", osVersion)) > 0) dir <- iconv(dir, "UTF-8")
+    dir <- iconv(dir, "UTF-8")
 
     setwd(dir)
 
