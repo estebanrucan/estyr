@@ -38,7 +38,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
     dir    <- iconv(dir, "UTF-8")
     titulo <- iconv(titulo, "UTF-8")
 
-    stopifnot(length(dir) > 0 & titulo != '')
+    stopifnot(length(dir) > 0)
 
     contenido_archivo <- c("---",
                  paste0("title: \"<center>", titulo, "</center>\""),
