@@ -11,6 +11,7 @@
 #' @return Tema de echarts4r.
 #'
 #' @import echarts4r
+#' @import magrittr
 #'
 #' @encoding UTF-8
 #'
@@ -20,5 +21,13 @@
 #'
 
 e_theme_estyr <- function(e) {
-    echarts4r::e_theme_custom(e, "https://github.com/estebanrucan/estyr/raw/main/inst/chart_themes/theme_estyr.json")
+    url <- "https://github.com/estebanrucan/estyr/raw/main/inst/chart_themes/theme_estyr.json"
+
+    echarts4r::e_theme_custom(e, url) %>%
+        echarts4r::e_x_axis(nameLocation = "center",
+                            splitArea = list(show = FALSE),
+                            axisLabel = list(margin = 0)) %>%
+        echarts4r::e_y_axis(nameLocation = "center",
+                            splitArea = list(show = FALSE),
+                            axisLabel = list(margin = 0))
 }

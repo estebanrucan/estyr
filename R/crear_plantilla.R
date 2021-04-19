@@ -80,9 +80,10 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "",
                  "# Tema de los gr\u00E1ficos",
                  "",
-                 "thematic::thematic_on(bg     = 'auto',",
-                 "                      fg     = 'auto',",
-                 "                      accent = 'auto')",
+                 "thematic::thematic_on(bg          = 'auto',",
+                 "                      fg          = 'auto',",
+                 "                      accent      = 'auto',",
+                 "                      qualitative = c('#6a4c93', '#13b591', '#1982c4', '#990033', '#4b778d')",
                  "",
                  "ggplot2::theme_set(estyr::theme_estyr())",
                  "",
@@ -97,6 +98,7 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "require(Hmisc, include.only = 'Cs')",
                  "",
                  "# suppressPackageStartupMessages(require(broom))",
+                 "# suppressPackageStartupMessages(require(corrmorant))",
                  "# suppressPackageStartupMessages(require(dlookr))",
                  "# suppressPackageStartupMessages(require(GGally))",
                  "# suppressPackageStartupMessages(require(ggExtra))",
@@ -143,17 +145,24 @@ crear_plantilla <- function(titulo             = 'Sin t\u00EDtulo',
                  "",
                  "```")
 
-    titulo_snake_case <- iconv(tolower(gsub(" ", "-", titulo)), to = 'ASCII//TRANSLIT')
-
-    nombre_archivo <- paste0(dir, '//', format(Sys.Date(), format = '%Y-%m-%d'), '_', titulo_snake_case, '.Rmd')
+    titulo_snake_case <- iconv(tolower(gsub(" ", "-", titulo)),
+                               to = 'ASCII//TRANSLIT')
+    nombre_archivo    <- paste0(dir,
+                                '//',
+                                format(Sys.Date(), format = '%Y-%m-%d'),
+                                '_',
+                                titulo_snake_case,
+                                '.Rmd')
 
     file.create(nombre_archivo)
 
     archivo <- file(nombre_archivo)
 
-    writeLines(contenido_archivo, archivo, useBytes = TRUE)
+    writeLines(contenido_archivo,
+               archivo,
+               useBytes = TRUE)
 
-    options('yaml.eval.expr' = TRUE)
+    options(yaml.eval.expr = TRUE)
 
     close(archivo)
 
