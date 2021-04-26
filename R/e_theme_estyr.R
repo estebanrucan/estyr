@@ -21,13 +21,14 @@
 #'
 
 e_theme_estyr <- function(e) {
-    url <- "https://github.com/estebanrucan/estyr/raw/main/inst/chart_themes/theme_estyr.json"
 
-    echarts4r::e_theme_custom(e, url) %>%
-        echarts4r::e_x_axis(nameLocation = "center",
-                            splitArea = list(show = FALSE),
-                            axisLabel = list(margin = 0)) %>%
-        echarts4r::e_y_axis(nameLocation = "center",
-                            splitArea = list(show = FALSE),
-                            axisLabel = list(margin = 0))
+    theme_dir  <- system.file("chart_themes", package = "estyr")
+    theme_file <- file.path(theme_dir, 'theme_estyr.json')
+
+    echarts4r::e_theme_custom(e, theme_file) %>%
+        echarts4r::e_x_axis(splitArea = list(show = FALSE),
+                            axisLabel = list(margin = 10),
+                            nameTextStyle = list(margin = 0)) %>%
+        echarts4r::e_y_axis(splitArea = list(show = FALSE),
+                            axisLabel = list(margin = 10))
 }
