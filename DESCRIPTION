@@ -1,7 +1,7 @@
 Package: estyr
 Type: Package
 Title: Package con funciones y recursos que facilitan el trabajo
-Version: 1.0.0
+Version: 1.1.0
 Author: Esteban Rucán
 Maintainer: Esteban Rucán <errucan@gmail.com>
 Description: Un package que es bastante util, 
@@ -16,14 +16,14 @@ Imports:
     usethis,
     thematic,
     rstudioapi,
-    pacman,
     utils,
     ggplot2,
     tidyverse,
     tibble,
     rio,
     echarts4r,
-    magrittr
+    magrittr,
+    tidyr
 Depends: 
     R (>= 3.5.0)
 Language: es
