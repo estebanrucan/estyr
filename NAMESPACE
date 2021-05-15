@@ -2,6 +2,7 @@
 
 export(actualizar_package)
 export(crear_plantilla)
+export(crear_presentacion)
 export(crear_proyecto)
 export(e_theme_estyr)
 export(owid_covid_data)

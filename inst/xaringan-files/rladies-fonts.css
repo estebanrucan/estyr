@@ -1,0 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+body { font-family: 'Lato', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif; }
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; }
+.remark-code, .remark-inline-code { font-family: 'Fira Code', monospace; color: #88398A}
