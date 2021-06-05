@@ -32,10 +32,11 @@ crear_proyecto <- function(estructura = FALSE) {
 
     setwd(dir)
 
+    dir.create('datos')
+
     if (estructura) {
-        dir.create('datasets')
-        dir.create('datasets//procesados')
-        dir.create('datasets//sin-procesar')
+        dir.create('datos//procesados')
+        dir.create('datos//sin-procesar')
         dir.create('codigo')
         dir.create('codigo//analsis-exploratorio')
         file.create('codigo//analsis-exploratorio//exploraciones.R')
