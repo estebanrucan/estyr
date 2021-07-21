@@ -31,7 +31,7 @@ crear_plantilla(
 Plantilla de R Markdown.
 }
 \description{
-Crear una plantilla de R Markdown en el directorio seleccionado.
+(En desuso) Crear una plantilla de R Markdown en el directorio seleccionado.
 }
 \details{
 Esta función proporciona una forma rápida de crear una plantilla de R Markdown.

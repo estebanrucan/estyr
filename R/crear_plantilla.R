@@ -1,6 +1,6 @@
 #' Crear Plantilla de R Markdown.
 #'
-#' Crear una plantilla de R Markdown en el directorio seleccionado.
+#' (En desuso) Crear una plantilla de R Markdown en el directorio seleccionado.
 #'
 #' Esta función proporciona una forma rápida de crear una plantilla de R Markdown.
 #'

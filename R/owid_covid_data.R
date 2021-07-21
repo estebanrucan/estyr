@@ -10,13 +10,12 @@
 #'
 #' @encoding UTF-8
 #'
-#' @importFrom rio import
-#' @importFrom tibble tibble
+#' @importFrom vroom vroom
 #'
 #' @examples \dontrun{owid_covid_data()}
 #'
 #' @export
 
 owid_covid_data <- function() {
-    tibble::tibble(rio::import('https://github.com/owid/covid-19-data/raw/master/public/data/owid-covid-data.xlsx'))
+    vroom('https://github.com/owid/covid-19-data/raw/master/public/data/owid-covid-data.csv')
 }

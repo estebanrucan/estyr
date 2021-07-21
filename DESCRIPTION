@@ -1,7 +1,7 @@
 Package: estyr
 Type: Package
 Title: Package con funciones y recursos que facilitan el trabajo
-Version: 1.1.0
+Version: 2.0.0
 Author: Esteban Rucán
 Maintainer: Esteban Rucán <errucan@gmail.com>
 Description: Un package que es bastante util, 
@@ -12,18 +12,11 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
     remotes,
-    bslib,
     usethis,
-    thematic,
     rstudioapi,
     utils,
-    ggplot2,
-    tidyverse,
-    tibble,
-    rio,
-    echarts4r,
-    magrittr,
-    tidyr
+    vroom,
+    pacman
 Depends: 
     R (>= 3.5.0)
 Language: es
