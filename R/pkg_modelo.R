@@ -18,7 +18,7 @@
 
 pkg_modelos <- function() {
 
-    pacman::p_load("lmtest",
+    pacman::p_load(c("lmtest",
                    "car",
                    "caret",
                    "MASS",
@@ -30,7 +30,7 @@ pkg_modelos <- function() {
                    "usemodels",
                    "performance",
                    "parameters",
-                   "themis",
+                   "themis"),
                    character.only = TRUE)
 
     writeLines(c("Packages cargados: ", sort(c("- lmtest",
