@@ -18,9 +18,10 @@
 
 pkg_series_modeltime <- function() {
 
-    pacman::p_load(tidymodels,
-                   modeltime,
-                   modeltime.ensemble)
+    pacman::p_load("tidymodels",
+                   "modeltime",
+                   "modeltime.ensemble",
+                   character.only = TRUE)
 
     writeLines(c("Packages cargados:", sort(c("- tidymodels",
                                               "- modeltime",

@@ -18,22 +18,21 @@
 
 pkg_analisis <- function() {
 
-    pacman::p_load(glue,
-                   lubridate,
-                   janitor,
-                   psych,
-                   slider,
-                   correlation,
-                   rstatix,
-                   ggtatsplot,
-                   widyr,
-                   dlookr,
-                   DataExplorer,
-                   tidyverse)
+    pacman::p_load("glue",
+                   "lubridate",
+                   "janitor",
+                   "slider",
+                   "correlation",
+                   "rstatix",
+                   "ggstatsplot",
+                   "widyr",
+                   "dlookr",
+                   "DataExplorer",
+                   "tidyverse",
+                   character.only = TRUE)
 
     writeLines(c("Packages cargados:", sort(c("- glue",
                                               "- lubridate",
-                                              "- psych",
                                               "- janitor",
                                               "- slider",
                                               "- correlation",

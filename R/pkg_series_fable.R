@@ -18,11 +18,12 @@
 
 pkg_series_fable <- function() {
 
-    pacman::p_load(ggplot2,
-                   tsibble,
-                   feasts,
-                   fable,
-                   fable.prophet)
+    pacman::p_load("ggplot2",
+                   "tsibble",
+                   "feasts",
+                   "fable",
+                   "fable.prophet",
+                   character.only = TRUE)
 
     writeLines(c("Packages cargados:", sort(c("- ggplot2",
                   "- tsibble",

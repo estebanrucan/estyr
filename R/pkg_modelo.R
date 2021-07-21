@@ -18,19 +18,20 @@
 
 pkg_modelos <- function() {
 
-    pacman::p_load(lmtest,
-                   car,
-                   caret,
-                   MASS,
-                   ggfortify,
-                   gamlss,
-                   tidymodels,
-                   broom,
-                   vip,
-                   usemodels,
-                   performance,
-                   parameters,
-                   themis)
+    pacman::p_load("lmtest",
+                   "car",
+                   "caret",
+                   "MASS",
+                   "ggfortify",
+                   "gamlss",
+                   "tidymodels",
+                   "broom",
+                   "vip",
+                   "usemodels",
+                   "performance",
+                   "parameters",
+                   "themis",
+                   character.only = TRUE)
 
     writeLines(c("Packages cargados: ", sort(c("- lmtest",
                   "- car",
