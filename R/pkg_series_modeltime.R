@@ -16,7 +16,7 @@
 #'
 #' @export
 
-pkg_series_fable <- function() {
+pkg_series_modeltime <- function() {
 
     pacman::p_load(tidymodels,
                    modeltime,
