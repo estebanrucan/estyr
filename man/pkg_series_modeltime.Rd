@@ -14,7 +14,7 @@ Packages de series de tiempo cargados
 Función que carga packages de series de tiempo
 }
 \details{
-ggplot2, tsibble, feasts, fable, fable.prophet
+tidymodels, modeltime, modeltime.ensemble
 }
 \examples{
 \dontrun{pkg_series_modeltime()}

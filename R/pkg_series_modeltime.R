@@ -2,7 +2,7 @@
 #'
 #' Función que carga packages de series de tiempo
 #'
-#' ggplot2, tsibble, feasts, fable, fable.prophet
+#' tidymodels, modeltime, modeltime.ensemble
 #'
 #' @author Esteban Rucán.
 #'
